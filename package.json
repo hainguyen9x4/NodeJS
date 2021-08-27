@@ -2,9 +2,9 @@
   "name": "nodejs_f8",
   "version": "1.0.0",
   "description": "Hoc NodeJS F8",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
-    "start":"nodemon --inspect main.js",
+    "start": "nodemon --inspect src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/hainguyen9x4/NodeJS#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   }
 }
