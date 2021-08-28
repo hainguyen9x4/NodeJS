@@ -9,11 +9,10 @@ app.use(morgan('combined'));
 //Template engine
 app.engine('hbs', exphbs({extname:'.hbs'}));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
-//console.log(path.join("-----"+__dirname, 'views'));
+app.set('views', path.join(__dirname, 'resources/views'));// set view folder
 
-app.get('/news', (req, res) => {
-  res.render('home')
+app.get('/', (req, res) => {
+  res.render('home');
 });
 
 app.listen(port, () => {
