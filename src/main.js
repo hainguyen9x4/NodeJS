@@ -14,7 +14,13 @@ app.set('views', path.join(__dirname, 'resources/views'));// set view folder
 app.get('/', (req, res) => {
   res.render('home');
 });
-
+app.get('/search', (req, res) => {
+  console.log("------check the query parameter------");
+  console.log(req.query);
+  console.log(req.query.a);
+  console.log(req.query.b);
+  res.render('search');
+});
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
