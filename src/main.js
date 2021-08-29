@@ -21,8 +21,7 @@ app.get('/', (req, res) => {
 app.get('/search', (req, res) => {
   console.log("------check the query parameter------");
   console.log(req.query);
-  console.log(req.query.a);
-  console.log(req.query.b);
+  console.log(req.query.str);
   res.render('search');
 });
 app.listen(port, () => {
