@@ -4,6 +4,10 @@ const exphbs  = require('express-handlebars');
 const path  = require('path');
 const app = express();
 const port = 3000;
+
+//cofig static folder
+app.use(express.static(path.join(__dirname,'public')));
+
 //HTTP logger
 app.use(morgan('combined'));
 //Template engine
